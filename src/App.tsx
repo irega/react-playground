@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./Header/Header";
-import { useState } from "react";
+import React, { useState } from "react";
+import Title from "./Title/Title";
 
 function App() {
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Title text={"hola"} />
       {headerVisible ? (
         <Header onHide={handleHideHeader}>
           <img src={logo} className="App-logo" alt="logo" />
