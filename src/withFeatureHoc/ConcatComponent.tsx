@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface Props {
   text: string;
@@ -25,4 +25,6 @@ const ConcatComponent = (props: Props) => {
   );
 };
 
-export { ConcatComponent };
+const ConcatComponentMemo = React.memo(ConcatComponent);
+
+export { ConcatComponentMemo as ConcatComponent };
