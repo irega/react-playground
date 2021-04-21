@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { RenderPropsComponent } from "../RenderPropsComponent/RenderPropsComponent";
 
 export interface WithFeatureProps {
   text: string;
@@ -21,6 +22,7 @@ const withFeatureHoc = <P extends WithFeatureProps>(
     return (
       <div>
         <h1>{chars}</h1>
+        <RenderPropsComponent>{(text) => <h1>{text}</h1>}</RenderPropsComponent>
         <button onClick={handleConcat}>Concat</button>
         <Wrapped {...(props as P)} />
       </div>
