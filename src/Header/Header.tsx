@@ -7,17 +7,18 @@ interface Props {
 
 const Header = ({ onHide, children }: PropsWithChildren<Props>) => {
   const [userName, setUserName] = useState("");
-  const [checkState, setCheckState] = useState("No checking...");
+  const [checkState /*, setCheckState*/] = useState("No checking...");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      console.log("Checking");
-      setCheckState("Checking");
-    }, 1000);
+    // Uncomment to test the useEffect clean function
+    // const interval = setInterval(() => {
+    //   console.log("Checking");
+    //   setCheckState("Checking");
+    // }, 1000);
 
     return () => {
       console.log("unmounting header");
-      clearInterval(interval);
+      // clearInterval(interval);
     };
   }, []);
 
