@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 interface Props {
   text: string;
+  onCallback: () => void;
 }
 
 const ConcatComponent = (props: Props) => {
@@ -19,6 +20,7 @@ const ConcatComponent = (props: Props) => {
     <>
       <h1>{chars}</h1>
       <button onClick={handleConcat}>Concat</button>
+      <button onClick={props.onCallback}>Callback</button>
     </>
   );
 };
