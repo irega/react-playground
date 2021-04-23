@@ -5,10 +5,12 @@ const SlowComponent = () => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const slowFunction = (num: number) => {
+    console.log("starting calculation");
     let result = "";
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 100000; i++) {
       result += num;
     }
+    console.log("calculation end");
     return result;
   };
 
