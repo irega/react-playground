@@ -5,6 +5,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import Title from "./Title/Title";
 import { ContextConsumer } from "./ContextConsumer/ContextConsumer";
 import { SharedContext } from "./contexts/SharedContext";
+import { SlowComponent } from "./SlowComponent/SlowComponent";
 
 function App() {
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -57,6 +58,7 @@ function App() {
           <button onClick={handleShowHeader}>Show component</button>
         )}
         <Lazy />
+        <SlowComponent />
       </div>
     </Suspense>
   );
