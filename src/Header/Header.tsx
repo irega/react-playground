@@ -1,4 +1,5 @@
-import { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren, useState } from "react";
+import { useCheck } from "../hooks/useCheck";
 import "./Header.css";
 
 interface Props {
@@ -7,20 +8,7 @@ interface Props {
 
 const Header = ({ onHide, children }: PropsWithChildren<Props>) => {
   const [userName, setUserName] = useState("");
-  const [checkState /*, setCheckState*/] = useState("No checking...");
-
-  useEffect(() => {
-    // Uncomment to test the useEffect clean function
-    // const interval = setInterval(() => {
-    //   console.log("Checking");
-    //   setCheckState("Checking");
-    // }, 1000);
-
-    return () => {
-      console.log("unmounting header");
-      // clearInterval(interval);
-    };
-  }, []);
+  const { checkState } = useCheck();
 
   const handleLogin = () => setUserName("irega@yahoo.es");
   const handleHideComponent = () => (onHide ? onHide() : void 0);
