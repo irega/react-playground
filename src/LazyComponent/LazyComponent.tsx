@@ -17,7 +17,10 @@ const LazyComponent = () => {
   return (
     <>
       <h1>Lazy</h1>
-      <button onClick={() => dispatch({ type: "change", field: "one" })}>
+      <button
+        data-testid="oneButton"
+        onClick={() => dispatch({ type: "change", field: "one" })}
+      >
         {state.one}
       </button>
       <button onClick={() => dispatch({ type: "change", field: "two" })}>

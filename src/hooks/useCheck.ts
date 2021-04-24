@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useCheck = () => {
-  const [checkState /*, setCheckState*/] = useState("No checking...");
+  const [checkState, setCheckState] = useState("No checking...");
 
   useEffect(() => {
     // Uncomment to test the useEffect clean function
@@ -16,7 +16,7 @@ const useCheck = () => {
     };
   }, []);
 
-  return { checkState };
+  return { checkState, setCheckState };
 };
 
 export { useCheck };
