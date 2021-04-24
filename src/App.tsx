@@ -6,6 +6,7 @@ import Title from "./Title/Title";
 import { ContextConsumer } from "./ContextConsumer/ContextConsumer";
 import { SharedContext } from "./contexts/SharedContext";
 import { SlowComponent } from "./SlowComponent/SlowComponent";
+import { MyModal } from "./MyModal/MyModal";
 
 function App() {
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -59,6 +60,7 @@ function App() {
         )}
         <Lazy />
         <SlowComponent />
+        <MyModal />
       </div>
     </Suspense>
   );

@@ -47,7 +47,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 # To review
 
-- React portal
 - class components & lifecycle
 - react testing library
 - styled components & CSS
